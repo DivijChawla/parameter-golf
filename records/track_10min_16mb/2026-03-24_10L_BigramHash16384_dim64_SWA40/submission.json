@@ -1,0 +1,16 @@
+{
+  "name": "10L Int5-MLP + BigramHash(16384, dim=64) + SWA(frac=0.4) + WD=0.04",
+  "val_loss": 1.14594585,
+  "val_bpb": 1.14594585,
+  "bytes_total": 15923771,
+  "blurb": "10 layers mixed int5/int6 quantization. BigramHash vocab=16384 dim=64 vs thwu1's 10240x128 — same ~1MB embedding parameter budget but wider vocabulary (16384 buckets). SWA start_frac=0.4, swa_every=50. Muon WD=0.04, warmdown=3000. SmearGate + OrthoInit + zstd-22. Single seed (1337), 7306 steps on 8xH200, 10-min wall-clock. Finding: at equal param budget, wider vocab outperforms higher dim for bigram hash embeddings.",
+  "author": "Divij Chawla",
+  "github_id": "DivijChawla",
+  "seeds": [1337],
+  "seed_results": {
+    "1337": {"val_bpb": 1.14594585, "val_loss": 1.93487645}
+  },
+  "note": "Single seed — additional seeds pending.",
+  "hardware": "8xH200 (RunPod)",
+  "date": "2026-03-24"
+}
